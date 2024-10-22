@@ -62,7 +62,7 @@ const SupervisorLeavePanel = () => {
                         <tr key={request.id} className={request.request_status === 'Pending' ? 'bg-gray-100' : ''}>
                             <td className="p-3 border-b">{new Date(request.start_date).toLocaleDateString()}</td>
                             <td className="p-3 border-b">{request.type_name}</td>
-                            <td className="p-3 border-b">{request.duration}</td>
+                            <td className="p-3 border-b">{parseInt(request.duration, 10) + 1}</td>
                             <td className="p-3 border-b">{request.name}</td>
                             <td className="p-3 border-b">
                                 <span 
