@@ -90,7 +90,7 @@ const leaveController = {
 
     getLeaveRequestOfUser: async (req, res) => {
         try {
-            const token = req.cookies['user'];
+            const token = req.cookies['user'].token;
             if (!token) return res.status(401).json({ message: 'No token found' });
 
             const verified = jwt.verify(token, secretKey);

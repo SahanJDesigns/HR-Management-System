@@ -35,6 +35,7 @@ const leaveModel = {
             JOIN leavetype ON leavetype.leave_type_id = leaverequest.leave_type_id 
             WHERE employee_id = ?`;
         const [leaveRequests] = await pool.query(query, [employee_id]);
+        console.log(leaveRequests)
         return leaveRequests;
     },
 
